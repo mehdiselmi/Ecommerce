@@ -7,7 +7,7 @@ import { IoCloseSharp } from "react-icons/io5";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="flex justify-between items-center  px-10 md:px-20 py-5">
+    <div className="flex justify-between items-center  px-10 md:px-20 pt-8">
       <div className="">
         <h1 className="font-bold text-2xl">
           fancy{" "}
@@ -17,33 +17,73 @@ const Navbar = () => {
         </h1>
       </div>
       <div className="">
-        <ul className="hidden md:flex md:justify-center md:gap-6 ">
+        <ul className="hidden md:flex md:justify-center md:gap-6 md:uppercase ">
           <li>
-            <a href="#Shop"  className="transition-all duration-500 hover:text-[#FCA311]">Shop</a>
+            <a
+              href="#Shop"
+              className="transition-all duration-500 hover:text-primary"
+            >
+              Shop
+            </a>
           </li>
           <li>
-            <a href="#Men" className="transition-all duration-500 hover:text-[#FCA311]">Men</a>
+            <a
+              href="#Men"
+              className="transition-all duration-500 hover:text-primary"
+            >
+              Men
+            </a>
           </li>
           <li>
-            <a href="#Women" className="transition-all duration-500 hover:text-[#FCA311]">Women</a>
+            <a
+              href="#Women"
+              className="transition-all duration-500 hover:text-primary"
+            >
+              Women
+            </a>
           </li>
           <li>
-            <a href="#Kids" className="transition-all duration-500 hover:text-[#FCA311]">Kids</a>
+            <a
+              href="#Kids"
+              className="transition-all duration-500  hover:text-primary"
+            >
+              Kids
+            </a>
           </li>
         </ul>
         {open && (
-          <ul className="absolute top-15 max-h-full w-full right-0  bg-[#14213D] p-4 space-y-2 md:hidden">
+          <ul className="absolute top-25 max-h-full w-full right-0  bg-secondary opacity-99  p-4 space-y-2 md:hidden">
             <li>
-              <a className="hover:text-white transition-all duration-500 text-[#FCA311]" href="#Shop">Shop</a>
+              <a
+                className="hover:text-white transition-all duration-500 text-primary"
+                href="#Shop"
+              >
+                Shop
+              </a>
             </li>
             <li>
-              <a className="hover:text-white  transition-all duration-500 text-[#FCA311]" href="#Men">Men</a>
+              <a
+                className="hover:text-white  transition-all duration-500 text-primary"
+                href="#Men"
+              >
+                Men
+              </a>
             </li>
             <li>
-              <a className="hover:text-white transition-all duration-500 text-[#FCA311]" href="#Women">Women</a>
+              <a
+                className="hover:text-white transition-all duration-500 text-primary"
+                href="#Women"
+              >
+                Women
+              </a>
             </li>
             <li>
-              <a className="hover:text-white transition-all duration-500 text-[#FCA311]" href="#Kids">Kids</a>
+              <a
+                className="hover:text-white transition-all duration-500 text-primary"
+                href="#Kids"
+              >
+                Kids
+              </a>
             </li>
           </ul>
         )}
@@ -52,7 +92,7 @@ const Navbar = () => {
         <FaUser />
         <FaHeart />
         <FaShoppingCart />
-        <button className="md:hidden flex" onClick={() => setOpen(!open)}>
+        <button className="md:hidden flex " onClick={() => setOpen(!open)}>
           {open ? <IoCloseSharp className="text-xl " /> : <GiHamburgerMenu />}
         </button>
       </div>
