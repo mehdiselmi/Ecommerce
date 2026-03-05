@@ -1,19 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="bg-secondary">
-      <div>
-        <h1 className="">
-          fancy <span className="text-">closet</span>
+    <div className="flex justify-between items-center  px-10 md:px-20 py-5">
+      <div className="">
+        <h1 className="font-bold text-2xl">
+          fancy{" "}
+          <span className="bg-[#FCA311] text-white rounded-xs px-1">
+            closet
+          </span>
         </h1>
       </div>
-
-      <FaUser />
-      <FaHeart />
-      <FaShoppingCart />
+      <div className="">
+        <ul className="hidden md:flex md:justify-center md:gap-6 ">
+          <li>
+            <a href="#Shop"  className="transition-all duration-500 hover:text-[#FCA311]">Shop</a>
+          </li>
+          <li>
+            <a href="#Men" className="transition-all duration-500 hover:text-[#FCA311]">Men</a>
+          </li>
+          <li>
+            <a href="#Women" className="transition-all duration-500 hover:text-[#FCA311]">Women</a>
+          </li>
+          <li>
+            <a href="#Kids" className="transition-all duration-500 hover:text-[#FCA311]">Kids</a>
+          </li>
+        </ul>
+        {open && (
+          <ul className="absolute top-15 max-h-full w-full right-0  bg-[#14213D] p-4 space-y-2 md:hidden">
+            <li>
+              <a className="hover:text-white transition-all duration-500 text-[#FCA311]" href="#Shop">Shop</a>
+            </li>
+            <li>
+              <a className="hover:text-white  transition-all duration-500 text-[#FCA311]" href="#Men">Men</a>
+            </li>
+            <li>
+              <a className="hover:text-white transition-all duration-500 text-[#FCA311]" href="#Women">Women</a>
+            </li>
+            <li>
+              <a className="hover:text-white transition-all duration-500 text-[#FCA311]" href="#Kids">Kids</a>
+            </li>
+          </ul>
+        )}
+      </div>
+      <div className="flex gap-4 text-xl">
+        <FaUser />
+        <FaHeart />
+        <FaShoppingCart />
+        <button className="md:hidden flex" onClick={() => setOpen(!open)}>
+          {open ? <IoCloseSharp className="text-xl " /> : <GiHamburgerMenu />}
+        </button>
+      </div>
     </div>
   );
 };
