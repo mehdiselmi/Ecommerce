@@ -12,7 +12,7 @@ const App = () => {
       className={dark ? "text-white bg-secondary " : "text-secondary bg-white"}
     >
       <Navbar dark={dark} />
- <div className="flex justify-center  ">
+ {/* <div className="flex justify-center  ">
         <button onClick={() => setDark(!dark)}>
           {dark ? (
             <MdLightMode className="hover:scale-110 text-xl cursor-pointer transition-all duration-500" />
@@ -20,7 +20,7 @@ const App = () => {
             <MdDarkMode className="hover:scale-110 text-xl cursor-pointer transition-all duration-500" />
           )}
         </button>
-      </div>
+      </div> */}
       <Hero dark={dark} />
      
       <Collection dark={dark} />
