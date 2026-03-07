@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Collection from "./components/Collection/Collection";
 import Feature from "./components/Feature/Feature";
 import About from "./components/About/About";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
 const App = () => {
-  const [dark, setDark] = useState(false);
   return (
+<<<<<<< HEAD
     <div
       className={dark ? "text-white bg-secondary " : "text-secondary bg-white"}
     >
@@ -24,9 +23,16 @@ const App = () => {
       <Hero dark={dark} />
      
       <Collection dark={dark} />
+=======
+    <div>
+      {/* Navbar */}
+      <Navbar/>
+>>>>>>> ae3f6e6 (Make website responsive)
 
-      <Feature dark={dark} />
-      <About dark={dark} />
+      <Hero />
+      <Collection />
+      <Feature />
+      <About />
     </div>
   );
 };

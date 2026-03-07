@@ -32,7 +32,7 @@ const About = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-1 opacity-99 rounded-xl  px-20 mt-20 gap-5 py-10 bg-secondary    md:grid-cols-4 my-10  ">
+    <div className="grid grid-cols-1 opacity-99 rounded-xl  px-20 mt-20 gap-5 py-20 bg-secondary    md:grid-cols-4 my-10  ">
       {data.map((item) => (
         <div
           key={item.id}

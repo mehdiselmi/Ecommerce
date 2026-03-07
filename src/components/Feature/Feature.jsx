@@ -34,8 +34,8 @@ const Feature = () => {
   return (
     <div className="mt-15 py-10 bg-gray-100">
       <div className="flex flex-col items-center justify-center">
-        <p className="text-xl font-semibold">Featured Products</p>
-        <p className="px-30 py-5 text-gray-600">
+        <p className="md:text-xl text-2xl font-semibold">Featured Products</p>
+        <p className="md:px-30 px-10 py-5 text-gray-600">
           Discover our most loved pieces, each crafted with care and designed
           for endless adventures.
         </p>

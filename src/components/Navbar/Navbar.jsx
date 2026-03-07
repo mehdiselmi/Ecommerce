@@ -57,7 +57,7 @@ const Navbar = () => {
           </li>
         </ul>
         {open && (
-          <ul className="absolute top-19   w-full right-0  bg-secondary opacity-97  p-4 space-y-2 md:hidden">
+          <ul className="absolute top-23   w-full right-0  bg-secondary opacity-97  p-4 space-y-2 md:hidden">
             <li>
               <a
                 className="hover:text-white transition-all duration-500 text-primary"

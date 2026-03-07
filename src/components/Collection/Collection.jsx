@@ -29,10 +29,10 @@ const Collection = () => {
     <div className="pt-10">
       <div className="flex flex-col items-center justify-center">
         <p className="text-xl font-semibold">Collections</p>
-        <h1 className="text-3xl text-secondary md:text-5xl text-center px-30  py-5 font-semibold">
+        <h1 className="text-xl text-secondary md:text-5xl text-center md:px-30  py-5 font-semibold">
           Three ways to find your <span className=" ">style</span>
         </h1>
-        <p className="px-30 text-gray-600">
+        <p className="md:px-30 px-10 text-gray-600">
           Each collection speaks to who you are and what you want to say to the
           world.
         </p>
