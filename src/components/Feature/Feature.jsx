@@ -50,7 +50,7 @@ const Feature = () => {
             <div className="rounded-lg p-5">
               <img
                 src={item.img}
-                className="h-90 w-full hover:scale-102 transition-all duration-300  rounded-xl bg-cover bg-center"
+                className="h-90 w-full hover:scale-102 avtive:scale-102 focus:scale-102 transition-all duration-300  rounded-xl bg-cover bg-center"
               />
             </div>
             <p className="px-5 ">⭐⭐⭐⭐⭐ <span className="text-gray-400">58 Reviews</span></p>
@@ -60,7 +60,7 @@ const Feature = () => {
             </div>
             <p className="px-5 text-gray-600">{item.year}</p>
             <div className="p-5">
-              <button className="border w-full py-2 hover:bg-white cursor-pointer hover:text-primary transition-all duration-800 font-bold rounded-lg bg-primary text-white outlie">
+              <button className="border w-full py-2 hover:bg-white cursor-pointer hover:text-primary transition-all duration-700 font-bold rounded-lg bg-primary text-white outline">
                 View Details
               </button>
             </div>

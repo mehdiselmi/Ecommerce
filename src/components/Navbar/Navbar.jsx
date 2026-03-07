@@ -26,7 +26,7 @@ const Navbar = () => {
           <li>
             <a
               href="#Shop"
-              className="transition-all duration-500 hover:text-primary"
+              className="transition-all duration-500 focus:text-primary active:text-primary hover:text-primary"
             >
               Shop
             </a>
@@ -34,7 +34,7 @@ const Navbar = () => {
           <li>
             <a
               href="#Men"
-              className="transition-all duration-500 hover:text-primary"
+              className="transition-all duration-500 focus:text-primary active:text-primary hover:text-primary"
             >
               Men
             </a>
@@ -42,7 +42,7 @@ const Navbar = () => {
           <li>
             <a
               href="#Women"
-              className="transition-all duration-500 hover:text-primary"
+              className="transition-all duration-500 focus:text-primary active:text-primary hover:text-primary"
             >
               Women
             </a>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <li>
             <a
               href="#Kids"
-              className="transition-all duration-500  hover:text-primary"
+              className="transition-all duration-500 focus:text-primary  active:text-primary hover:text-primary"
             >
               Kids
             </a>
