@@ -4,28 +4,28 @@ const Feature = () => {
   const card = [
     {
       id: 1,
-      img: "Images3.png",
+      img: "/Images3.png",
       title: " men men men vmen",
       price: "$200",
       year: "2-5 years . Dresses",
     },
     {
       id: 2,
-      img: "Images.png",
+      img: "/Images.png",
       title: "loremsdflknasgnoew",
       price: "$89",
       year: "3-12 years . Shorts",
     },
     {
       id: 3,
-      img: "Images1.png",
+      img: "/Images1.png",
       title: "loremsdflknasgnoew loremsdflknasgnoew loremsdflknasgnoew",
       price: "$99",
       year: "3-12 years . Shorts",
     },
     {
       id: 4,
-      img: "Images2.png",
+      img: "/Images2.png",
       title: "loremsdflknasgnoew loremsdflknasgnoew loremsdflknasgnoew",
       price: "$199",
       year: "12-18 years . Shorts",
