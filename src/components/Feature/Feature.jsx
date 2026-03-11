@@ -60,7 +60,7 @@ const Feature = () => {
             </div>
             <p className="px-5 text-gray-600">{item.year}</p>
             <div className="p-5">
-              <button className="border w-full py-2 hover:bg-white cursor-pointer hover:text-primary transition-all duration-700 font-bold rounded-lg bg-primary text-white outline">
+              <button className="border w-full py-2 active:bg-secondary focus:bg-secondary hover:bg-white cursor-pointer hover:text-primary transition-all duration-700 font-bold rounded-lg bg-primary text-white outline">
                 View Details
               </button>
             </div>

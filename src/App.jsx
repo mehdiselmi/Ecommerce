@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import Collection from "./components/Collection/Collection";
 import Feature from "./components/Feature/Feature";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 
 const App = () => {
   const dark = false; 
@@ -14,6 +15,7 @@ const App = () => {
       <Collection dark={dark} />
       <Feature dark={dark} />
       <About dark={dark} />
+      <Contact/>
     </div>
   );
 };
