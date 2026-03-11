@@ -4,28 +4,28 @@ const Feature = () => {
   const card = [
     {
       id: 1,
-      img: "/Images3.png",
+      img: "./Images3.png",
       title: " men men men vmen",
       price: "$200",
       year: "2-5 years . Dresses",
     },
     {
       id: 2,
-      img: "/Images.png",
+      img: "./Images.png",
       title: "loremsdflknasgnoew",
       price: "$89",
       year: "3-12 years . Shorts",
     },
     {
       id: 3,
-      img: "/Images1.png",
+      img: "./Images1.png",
       title: "loremsdflknasgnoew loremsdflknasgnoew loremsdflknasgnoew",
       price: "$99",
       year: "3-12 years . Shorts",
     },
     {
       id: 4,
-      img: "/Images2.png",
+      img: "./Images2.png",
       title: "loremsdflknasgnoew loremsdflknasgnoew loremsdflknasgnoew",
       price: "$199",
       year: "12-18 years . Shorts",
@@ -53,7 +53,9 @@ const Feature = () => {
                 className="h-90 w-full hover:scale-102 avtive:scale-102 focus:scale-102 transition-all duration-300  rounded-xl bg-cover bg-center"
               />
             </div>
-            <p className="px-5 ">⭐⭐⭐⭐⭐ <span className="text-gray-400">58 Reviews</span></p>
+            <p className="px-5 ">
+              ⭐⭐⭐⭐⭐ <span className="text-gray-400">58 Reviews</span>
+            </p>
             <div className="flex justify-between p-5">
               <h1 className="text-secondary text-xl">{item.title}</h1>
               <p className="font-bold text-primary">{item.price}</p>
