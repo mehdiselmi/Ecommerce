@@ -6,16 +6,14 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 
 const App = () => {
-  const dark = false; 
-
   return (
-    <div className={dark ? "text-white bg-secondary" : "text-secondary bg-white"}>
-      <Navbar dark={dark} />
-      <Hero dark={dark} />
-      <Collection dark={dark} />
-      <Feature dark={dark} />
-      <About dark={dark} />
-      <Contact/>
+    <div>
+      <Navbar />
+      <Hero />
+      <Collection />
+      <Feature />
+      <About />
+      <Contact />
     </div>
   );
 };
