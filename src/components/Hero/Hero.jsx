@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="mt-25 md:mt-30">
-      <div className="bg-[url('/Frame.png')] bg-cover bg-center  h-screen flex flex-col justify-center items-center">
+      <div className="bg-[url('./Frame.png')] bg-cover bg-center  h-screen flex flex-col justify-center items-center">
         <h1 className="text-3xl md:text-5xl font-bold">
           Dress like you mean it
         </h1>
