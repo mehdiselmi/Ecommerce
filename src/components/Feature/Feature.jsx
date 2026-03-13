@@ -1,32 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Feature = () => {
   const card = [
     {
       id: 1,
       img: "./Images3.png",
-      title: " men men men vmen",
+      title: "Men",
       price: "$200",
       year: "2-5 years . Dresses",
     },
     {
       id: 2,
       img: "./Images.png",
-      title: "loremsdflknasgnoew",
+      title: "Men",
       price: "$89",
       year: "3-12 years . Shorts",
     },
     {
       id: 3,
       img: "./Images1.png",
-      title: "loremsdflknasgnoew loremsdflknasgnoew loremsdflknasgnoew",
+      title: "Men",
       price: "$99",
       year: "3-12 years . Shorts",
     },
     {
       id: 4,
       img: "./Images2.png",
-      title: "loremsdflknasgnoew loremsdflknasgnoew loremsdflknasgnoew",
+      title: "Men  ",
       price: "$199",
       year: "12-18 years . Shorts",
     },
@@ -62,9 +63,11 @@ const Feature = () => {
             </div>
             <p className="px-5 text-gray-600">{item.year}</p>
             <div className="p-5">
-              <button className="border w-full py-2 active:bg-secondary focus:bg-secondary hover:bg-white cursor-pointer hover:text-primary transition-all duration-700 font-bold rounded-lg bg-primary text-white outline">
-                View Details
-              </button>
+              <Link to='/mens'>
+                <button className="border w-full py-2 active:bg-secondary focus:bg-secondary hover:bg-white cursor-pointer hover:text-primary transition-all duration-700 font-bold rounded-lg bg-primary text-white outline">
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
         ))}
