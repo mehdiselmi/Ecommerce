@@ -9,8 +9,8 @@ const Contact = () => {
     <div>
       <div className="flex pb-25  md:flex-row  gap-20 flex-col bg-black text-white justify-between md:items-center px-4  pt-30 md:px-10">
         <div className="space-y-3  ">
-          <h1 className="text-2xl font-bold pb-5">
-            Fancy{" "}
+          <h1 className="text-2xl font-bold pb-5 text-primary">
+            Fancy{" "} 
             <span className="text-black bg-white px-3 py-1  rounded-lg">
               Closet
             </span>

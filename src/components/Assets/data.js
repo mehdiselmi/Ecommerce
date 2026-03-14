@@ -1,34 +1,39 @@
-import p1_img from './product_1.png'
-import p2_img from './product_2.png'
-import p3_img from './product_3.png'
-import p4_img from './product_4.png'
-
-let data_product = [
+import Men1 from "../Assets/Men1.png";
+import Men2 from "../Assets/Men2.png";
+import Men3 from "../Assets/Men3.png";
+import Men4 from "../Assets/Men4.png";
+const card = [
   {
-    id:1,
-    name:"Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image:p1_img,
-    new_price:50.00,
-    old_price:80.50,
+    id: 1,
+    img: Men1,
+    title: "Men",
+    new_price: "$89",
+    old_price: "$289",
+    year: "2-5 years . Dresses",
   },
-  {id:2,
-    name:"Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image:p2_img,
-    new_price:85.00,
-    old_price:120.50,
+  {
+    id: 2,
+    img: Men2,
+    title: "Men",
+    new_price: "$89",
+    old_price: "$289",
+    year: "3-12 years . Shorts",
   },
-  {id:3,
-    name:"Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image:p3_img,
-    new_price:60.00,
-    old_price:100.50,
+  {
+    id: 3,
+    img: Men3,
+    title: "Men",
+    new_price: "$89",
+    old_price: "$289",
+    year: "3-12 years . Shorts",
   },
-  {id:4,
-    name:"Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image:p4_img,
-    new_price:100.00,
-    old_price:150.00,
+  {
+    id: 4,
+    img: Men4,
+    title: "Men  ",
+    new_price: "$89",
+    old_price: "$289",
+    year: "12-18 years . Shorts",
   },
 ];
-
-export default data_product;
+export default card;

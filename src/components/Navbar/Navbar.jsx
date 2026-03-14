@@ -60,8 +60,8 @@ const Navbar = () => {
           </li>
         </ul>
         {open && (
-          <ul className="absolute top-23   w-full right-0  bg-secondary opacity-97  p-4 space-y-2 md:hidden">
-            <li>
+          <ul className=" absolute top-23 h-screen space-y-10   w-full right-0  bg-secondary opacity-97  p-4 md:hidden">
+            <li className="underline decoration-primary underline-offset-8">
               <Link
                 className="hover:text-white active:text-white focus:text-white transition-all duration-500 text-primary"
                 to="/"
@@ -70,7 +70,7 @@ const Navbar = () => {
                 Shop
               </Link>
             </li>
-            <li>
+            <li  className="underline underline-offset-8 decoration-primary">
               <Link
                 className="hover:text-white active:text-white focus:text-white transition-all duration-500 text-primary"
                 to="/mens"
@@ -78,7 +78,7 @@ const Navbar = () => {
                 Men
               </Link>
             </li>
-            <li>
+            <li  className="underline underline-offset-8 decoration-primary" >
               <Link
                 className="hover:text-white active:text-white focus:text-white transition-all duration-500 text-primary"
                 to="/womens"
@@ -86,7 +86,7 @@ const Navbar = () => {
                 Women
               </Link>
             </li>
-            <li>
+            <li className="underline underline-offset-8 decoration-primary">
               <Link
                 className="hover:text-white active:text-white focus:text-white transition-all duration-500 text-primary"
                 to="/kids"

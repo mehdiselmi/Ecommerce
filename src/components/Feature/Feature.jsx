@@ -1,37 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import card from "../Assets/data";
+import Item from "../Item/Item";
 const Feature = () => {
-  const card = [
-    {
-      id: 1,
-      img: "./Images3.png",
-      title: "Men",
-      price: "$200",
-      year: "2-5 years . Dresses",
-    },
-    {
-      id: 2,
-      img: "./Images.png",
-      title: "Men",
-      price: "$89",
-      year: "3-12 years . Shorts",
-    },
-    {
-      id: 3,
-      img: "./Images1.png",
-      title: "Men",
-      price: "$99",
-      year: "3-12 years . Shorts",
-    },
-    {
-      id: 4,
-      img: "./Images2.png",
-      title: "Men  ",
-      price: "$199",
-      year: "12-18 years . Shorts",
-    },
-  ];
   return (
     <div className="mt-15 py-10 bg-gray-100">
       <div className="flex flex-col items-center justify-center">
@@ -43,34 +14,18 @@ const Feature = () => {
       </div>
 
       <div className="grid  grid-cols-1 md:grid-cols-2 md:w-230 pt-15 m-auto gap-10 items-center justify-center px-10  ">
-        {card.map((item) => (
-          <div
-            key={item}
-            className="bg-white  hover:shadow-lg transition-shadow duration-700 rounded-lg  "
-          >
-            <div className="rounded-lg p-5">
-              <img
-                src={item.img}
-                className="h-90 w-full hover:scale-102 avtive:scale-102 focus:scale-102 transition-all duration-300  rounded-xl bg-cover bg-center"
-              />
-            </div>
-            <p className="px-5 ">
-              ⭐⭐⭐⭐⭐ <span className="text-gray-400">58 Reviews</span>
-            </p>
-            <div className="flex justify-between p-5">
-              <h1 className="text-secondary text-xl">{item.title}</h1>
-              <p className="font-bold text-primary">{item.price}</p>
-            </div>
-            <p className="px-5 text-gray-600">{item.year}</p>
-            <div className="p-5">
-              <Link to='/mens'>
-                <button className="border w-full py-2 active:bg-secondary focus:bg-secondary hover:bg-white cursor-pointer hover:text-primary transition-all duration-700 font-bold rounded-lg bg-primary text-white outline">
-                  View Details
-                </button>
-              </Link>
-            </div>
-          </div>
-        ))}
+        {card.map((item) => {
+          return (
+            <Item
+              key={item.id}
+              year={item.year}
+              new_price={item.new_price}
+              old_price={item.old_price}
+              name={item.title}
+              img={item.img}
+            ></Item>
+          );
+        })}
       </div>
     </div>
   );

@@ -7,11 +7,12 @@ import Product from "./pages/Products";
 import ShopCategory from "./pages/ShopCategory";
 import Cart from "./pages/Cart";
 import LoginSignUp from "./pages/LoginSignUp";
+import Contact from "./components/Contact/Contact";
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />{" "}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Shop />}></Route>
           <Route path="/mens" element={<ShopCategory category="men" />}></Route>
@@ -27,7 +28,7 @@ const App = () => {
           <Route path="/login" element={<LoginSignUp />}></Route>
         </Routes>
        
-        
+      
       </BrowserRouter>
     </div>
   );
