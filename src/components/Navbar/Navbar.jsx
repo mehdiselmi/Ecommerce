@@ -16,12 +16,12 @@ const Navbar = () => {
     >
       <div className="">
         <h1 className={` font-bold text-2xl`}>
-          <a href="Shop">
+         <Link to='/'>
             fancy{" "}
             <span className="bg-[#FCA311] text-white rounded-xs px-1">
               closet
             </span>
-          </a>
+        </Link>
         </h1>
       </div>
       <div className={``}>

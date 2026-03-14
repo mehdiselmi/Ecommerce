@@ -27,13 +27,13 @@ const card = [
     old_price: "$289",
     year: "3-12 years . Shorts",
   },
-  {
-    id: 4,
-    img: Men4,
-    title: "Men  ",
-    new_price: "$89",
-    old_price: "$289",
-    year: "12-18 years . Shorts",
-  },
+  // {
+  //   id: 4,
+  //   img: Men4,
+  //   title: "Men  ",
+  //   new_price: "$89",
+  //   old_price: "$289",
+  //   year: "12-18 years . Shorts",
+  // },
 ];
 export default card;
