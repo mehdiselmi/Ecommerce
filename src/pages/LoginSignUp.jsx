@@ -8,7 +8,7 @@ const LoginSignUp = () => {
       <div className="  h-129 md:w-110 p-10 pt-20    md:ml-20">
         <div className="space-y-2">
           <h1 className="text-3xl font-bold">Sign In </h1>
-          <form  className="flex flex-col  ">
+          <form className="flex flex-col  ">
             <input
               type="email"
               placeholder="Email"

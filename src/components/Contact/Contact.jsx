@@ -28,7 +28,7 @@ const Contact = () => {
               <FaFacebookF className="hover:scale-105 cursor-pointer" />
               <FaInstagram className="hover:scale-110 cursor-pointer" />
               <FaXTwitter className="hover:scale-110 cursor-pointer" />
-              <FaLinkedin className="hover:scale-110 cursor-pointer" />
+             <a href="https://www.linkedin.com/in/mehdi-selmi-939a82273/"> <FaLinkedin className="hover:scale-110 cursor-pointer" /></a>
               <FaYoutube className="hover:scale-110 cursor-pointer" />
             </div>
           </div>
@@ -80,7 +80,7 @@ const Contact = () => {
         <div className="pb-10">
           <hr className="border-gray-700" />{" "}
           <p className="pt-5 text-center text-gray-400">
-            © 2026 Fancy Closet. All rights reserved.
+            © 2026 Mehdi Selmi. All rights reserved.
           </p>
         </div>
       </div>
