@@ -22,9 +22,9 @@ const Item = (props) => {
       </div>
       </div>
       <div className="p-5">
-        <Link to="/mens">
+        <Link to="/Cart">
           <button className="border w-full py-2 active:bg-secondary focus:bg-secondary hover:bg-white cursor-pointer hover:text-primary transition-all duration-700 font-bold rounded-lg bg-primary text-white outline">
-            View Details
+            Shop Now
           </button>
         </Link>
       </div>
