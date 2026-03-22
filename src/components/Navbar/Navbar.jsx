@@ -8,7 +8,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
-  // دالة لمعرفة الرابط النشط
+
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -17,11 +17,11 @@ const Navbar = () => {
       <h1 className="font-bold text-2xl">
         <Link to="/">
           fancy{" "}
-          <span className="bg-[#FCA311] text-white rounded-xs px-1">closet</span>
+          <span className="bg-primary text-white rounded-xs px-1">closet</span>
         </Link>
       </h1>
 
-      {/* Desktop Menu */}
+    
       <ul className="hidden md:flex md:gap-6 uppercase">
         <li>
           <Link
@@ -65,7 +65,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Mobile Menu */}
+      
       {open && (
         <ul className="absolute top-23 h-screen space-y-10 w-full right-0 bg-secondary opacity-97 p-4 md:hidden">
           <li>
@@ -83,14 +83,14 @@ const Navbar = () => {
         </ul>
       )}
 
-      {/* Icons + Hamburger */}
+     
       <div className="flex items-center gap-4 text-xl">
         <Link to="/login">
-          <FaUser className="hover:scale-110 cursor-pointer transition-all duration-500" />
+          <FaUser className="hover:scale-110  transition-all duration-500" />
         </Link>
-        <FaHeart className="hover:scale-110 cursor-pointer transition-all duration-500" />
+        <FaHeart className="hover:scale-110  transition-all duration-500" />
         <Link to="/cart">
-          <FaShoppingCart className="hover:scale-110 relative cursor-pointer transition-all duration-500" />
+          <FaShoppingCart className="hover:scale-110 relative  transition-all duration-500" />
         </Link>
         <div className="absolute right-18 bottom-11 rounded-full bg-primary w-4 h-4 flex justify-center items-center text-white font-bold text-[15px]">
           0
