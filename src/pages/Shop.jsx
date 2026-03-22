@@ -14,7 +14,7 @@ const Shop = () => {
       <Collection />
       <Feature />
       <About />
-      <Contact />
+     
     </div>
   );
 };

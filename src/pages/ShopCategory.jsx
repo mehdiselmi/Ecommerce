@@ -11,7 +11,7 @@ const ShopCategory = ({ category ,banner}) => {
 
   return (
     <div>
-      <img src={banner} className="md:w-240 h-30 md:h-50  md:px-0 px-5  m-auto mt-30 md:shadow-2xs shadow-black bg-center bg-cover " />
+      <img src={banner} className="md:w-240 h-30 md:h-70  md:px-0 px-5  m-auto mt-30 md:shadow-md shadow-black/30 bg-center bg-cover " />
     <div className="grid md:grid-cols-3 grid-cols-1 gap-6 md:w-260 mt-20 m-auto ">
       {filteredProducts.map((product) => (
         <Item

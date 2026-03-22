@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const LoginSignUp = () => {
   const [login, setLogin] = useState("login");
   return (
-    <div className="md:mt-20 mt-24 pt-6  text-secondary flex  items-center w-85 shadow-lg md:w-100 min-h-100 mx-auto flex-col">
+    <div className="md:mt-20 mt-24 pt-6 bg-neutral rounded-sm text-secondary flex  items-center w-85 shadow-lg md:w-100 min-h-100 mx-auto flex-col">
       <p className="text-2xl">Welcome to Fancy closet.</p>
       <div className="flex gap-10 mt-3">
         <button

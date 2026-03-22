@@ -6,9 +6,10 @@ import ShopCategory from "./pages/ShopCategory";
 import Cart from "./pages/Cart";
 import LoginSignUp from "./pages/LoginSignUp";
 import banner8 from "./components/Assets/banner8.jpg";
-import women_banner from "./components/Assets/banner_women.png";
+import banner2 from "./components/Assets/banner2.jpg";
 import kid_banner from "./components/Assets/banner_kids.png";
 import ShopContextProvider from "./context/ShopContext";
+import Contact from "./components/Contact/Contact";
 
 const App = () => {
   return (
@@ -17,12 +18,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route path="/mens" element={<ShopCategory banner={banner8} category="men's clothing" />} />
-        <Route path="/womens" element={<ShopCategory banner={women_banner} category="women's clothing" />} />
+        <Route path="/womens" element={<ShopCategory banner={banner2} category="women's clothing" />} />
         <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kids" />} />
         <Route path="/product/:productId" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<LoginSignUp />} />
       </Routes>
+       <Contact/>
     </ShopContextProvider>
   );
 };

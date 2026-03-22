@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className="mt-20">
       <div className="bg-black text-white px-4 md:px-10 pt-30">
-        <div className="flex pb-25 md:flex-row flex-col gap-20 justify-between md:items-center">
+        <div className="flex pb-20 md:flex-row flex-col gap-20 justify-between md:items-center">
           <div className="space-y-3  ">
             <h1 className="text-2xl font-bold pb-5 text-primary">
               Fancy{" "}
