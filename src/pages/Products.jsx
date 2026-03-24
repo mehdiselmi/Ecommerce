@@ -4,12 +4,12 @@ import { ShopContext } from "../context/ShopContext";
 import BreadCrum from "../components/BreadCrums/BreadCrum";
 
 const Products = () => {
-  const { Products } = useContext(ShopContext);
+  const { products } = useContext(ShopContext);
   const { productId } = useParams();
-  const product = Products.find((e) => e.id === Number(productId));
+  const product = products.find((e) => e.id === Number(productId));
   return (
     <div>
-      <BreadCrum product={product} />
+      <BreadCrum product={product}  image={product.image} price={product.price} title={product.title}/>
     </div>
   );
 };

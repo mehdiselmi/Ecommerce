@@ -4,11 +4,11 @@ import Products from "../../pages/Products";
 
 const Item = (props) => {
   return (
-    <div className="bg-neutral md:h-auto md:w-auto h-80 w-90  hover:shadow-lg transition-shadow duration-700 rounded-lg  ">
+    <div className="bg-neutral pt-5 my-5 md:h-auto md:w-80 h-100 w-80 mx-auto  hover:shadow-lg transition-shadow duration-700 rounded-lg  ">
       <div className="rounded-lg md:p-5">
         <img
           src={props.img}
-          className="md:h-90 m-auto mb-4  h-30 w-40 md:w-full hover:scale-102 avtive:scale-102 focus:scale-102 transition-all duration-300  rounded-xl bg-cover bg-center"
+          className="md:h-90 m-auto mb-4  h-50 w-70 md:w-full hover:scale-102 avtive:scale-102 focus:scale-102 transition-all duration-300  rounded-xl bg-cover bg-center"
         />
       </div>
       <div className="md:px-5 px-3">

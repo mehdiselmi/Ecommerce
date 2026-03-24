@@ -13,7 +13,7 @@ const Feature = () => {
         </p>
       </div>
 
-      <div className="grid  grid-cols-1 md:grid-cols-2 md:w-230 pt-15 m-auto gap-10 items-center justify-center px-10  ">
+      <div className="grid  grid-cols-1 md:grid-cols-3 md:w-180  min-w-full pt-15 m-auto gap-10 items-center justify-center px-10  ">
         {card.map((item) => {
           return (
             <Item
