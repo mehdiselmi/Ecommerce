@@ -1,8 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import card from "../Assets/data";
+import React, { useContext } from "react";
 import Item from "../Item/Item";
+import { ShopContext } from "../../context/ShopContext";
+
 const Feature = () => {
+  const { products } = useContext(ShopContext);
+  const featuredProducts = products.filter((p) => p.category === "feature");
+
   return (
     <div className="mt-15 py-10 bg-gray-100">
       <div className="flex flex-col items-center justify-center">
@@ -13,19 +16,17 @@ const Feature = () => {
         </p>
       </div>
 
-      <div className="grid  grid-cols-1 md:grid-cols-3 md:w-180  min-w-full pt-15 m-auto gap-10 items-center justify-center px-10  ">
-        {card.map((item) => {
-          return (
-            <Item
-              key={item.id}
-              year={item.year}
-              new_price={item.new_price}
-              old_price={item.old_price}
-              name={item.title}
-              img={item.img}
-            ></Item>
-          );
-        })}
+      <div className="grid grid-cols-1 md:grid-cols-3 md:w-180 min-w-full pt-15 m-auto gap-10 items-center justify-center md:px-10">
+        {featuredProducts.map((item) => (
+          <Item
+            key={item.id}
+            id={item.id}
+            name={item.title}
+            new_price={item.new_price}
+            old_price={item.old_price}
+            image={item.image}
+          />
+        ))}
       </div>
     </div>
   );

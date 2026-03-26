@@ -17,7 +17,7 @@ const ShopCategory = ({ category ,banner}) => {
         <Item
           key={product.id}
           id={product.id}
-          img={product.image}
+          image={product.image}
           name={product.title}
           new_price={`$${product.price}`}
           old_price={`$${product.price + 20}`}

@@ -8,7 +8,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
-
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -21,7 +20,6 @@ const Navbar = () => {
         </Link>
       </h1>
 
-    
       <ul className="hidden md:flex md:gap-6 uppercase">
         <li>
           <Link
@@ -36,7 +34,9 @@ const Navbar = () => {
         <li>
           <Link
             className={`transition-all duration-500 ${
-              isActive("/mens") ? "underline underline-offset-4 text-primary" : ""
+              isActive("/mens")
+                ? "underline underline-offset-4 text-primary"
+                : ""
             } hover:text-primary`}
             to="/mens"
           >
@@ -46,7 +46,9 @@ const Navbar = () => {
         <li>
           <Link
             className={`transition-all duration-500 ${
-              isActive("/womens") ? "underline underline-offset-4 text-primary" : ""
+              isActive("/womens")
+                ? "underline underline-offset-4 text-primary"
+                : ""
             } hover:text-primary`}
             to="/womens"
           >
@@ -56,7 +58,9 @@ const Navbar = () => {
         <li>
           <Link
             className={`transition-all duration-500 ${
-              isActive("/kids") ? "underline underline-offset-4 text-primary" : ""
+              isActive("/kids")
+                ? "underline underline-offset-4 text-primary"
+                : ""
             } hover:text-primary`}
             to="/kids"
           >
@@ -65,25 +69,31 @@ const Navbar = () => {
         </li>
       </ul>
 
-      
       {open && (
         <ul className="absolute top-23 h-screen space-y-10 w-full right-0 bg-secondary opacity-97 p-4 md:hidden">
           <li>
-            <Link to="/" onClick={() => setOpen(false)}>Shop</Link>
+            <Link to="/" onClick={() => setOpen(false)}>
+              Shop
+            </Link>
           </li>
           <li>
-            <Link to="/mens" onClick={() => setOpen(false)}>Men</Link>
+            <Link to="/mens" onClick={() => setOpen(false)}>
+              Men
+            </Link>
           </li>
           <li>
-            <Link to="/womens" onClick={() => setOpen(false)}>Women</Link>
+            <Link to="/womens" onClick={() => setOpen(false)}>
+              Women
+            </Link>
           </li>
           <li>
-            <Link to="/kids" onClick={() => setOpen(false)}>Kids</Link>
+            <Link to="/kids" onClick={() => setOpen(false)}>
+              Kids
+            </Link>
           </li>
         </ul>
       )}
 
-     
       <div className="flex items-center gap-4 text-xl">
         <Link to="/login">
           <FaUser className="hover:scale-110  transition-all duration-500" />

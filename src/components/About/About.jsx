@@ -32,11 +32,11 @@ const About = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-1 opacity-99 rounded-xl  px-20 mt-20 gap-5 py-20 bg-secondary    md:grid-cols-4 my-10  ">
+    <div className="grid grid-cols-1 opacity-99 rounded-xl  px-20 mt-20 gap-5 py-20 bg-secondary    md:grid-cols-4 my-30  ">
       {data.map((item) => (
         <div
           key={item.id}
-          className="flex border border-secondary  shadow-white  flex-col items-center text-center p-6 rounded-xl shadow-xs  hover:-translate-y-2 focus:-translate-y-2 active:-translate-y-2 hover:shadow-lg active:shadow-lg hover:shadow-white active:shadow-white focus:shadow-white focus:shadow-lg   transition-all duration-300"
+          className="flex border bg-secondary border-secondary  shadow-white  flex-col items-center text-center p-6 rounded-xl shadow-xs  hover:-translate-y-2 focus:-translate-y-2 active:-translate-y-2 hover:shadow-lg active:shadow-lg hover:shadow-white active:shadow-white focus:shadow-white focus:shadow-lg   transition-all duration-300"
         >
           <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-3xl mb-4">
             {item.icons}

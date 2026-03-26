@@ -7,7 +7,7 @@ import { FaYoutube } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className="mt-20">
-      <div className="bg-black text-white px-4 md:px-10 pt-30">
+      <div className="bg-gray-950 text-white px-4 md:px-10 pt-30">
         <div className="flex pb-20 md:flex-row flex-col gap-20 justify-between md:items-center">
           <div className="space-y-3  ">
             <h1 className="text-2xl font-bold pb-5 text-primary">
@@ -38,19 +38,19 @@ const Contact = () => {
           <div className="flex justify-between underline decoration-secondary underline-offset-8 md:flex-row flex-col md:gap-20 gap-15 font-medium  cursor-pointer md:font-semibold">
             <div>
               <ul className="space-y-3 ">
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
+                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
                   Shop now
                 </li>
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
+                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
                   About us
                 </li>
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
+                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
                   Read blog
                 </li>
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
+                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
                   Contact us
                 </li>
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
+                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
                   {" "}
                   Size guide
                 </li>{" "}
@@ -81,7 +81,7 @@ const Contact = () => {
           </div>{" "}
         </div>
         <div className="pb-10">
-          <hr className="border-gray-700" />{" "}
+          <hr className="border-gray-700 border-2" />{" "}
           <p className="pt-5 text-center text-gray-400">
             © 2026 selmimehdi970@gmail.com. All rights reserved.
           </p>

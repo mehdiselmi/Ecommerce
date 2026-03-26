@@ -12,12 +12,6 @@ const LoginSignUp = () => {
         >
           Log in
         </button>
-        <button
-          className=" transition-all rounded-bl-lg duration-500  hover:scale-96 focus:scale-96 active:scale-96 bg-secondary p-2 text-white   shadow-lg font-semibold "
-          onClick={() => setLogin("sign up")}
-        >
-          Sign Up
-        </button>
       </div>
 
       <div>
@@ -53,10 +47,18 @@ const LoginSignUp = () => {
               <a href="" className="hover:text-black mb-3 text-gray-600">
                 Forget your password?
               </a>
-            </form>
+            </form>{" "}
+            <div className="flex items-center mb-3 gap-4">
+              <p>Don't have an account?</p>
+              <button
+                className="  hover:scale-96 focus:scale-96 active:scale-96 cursor-pointer   text-secondary    font-semibold "
+                onClick={() => setLogin("sign up")}
+              >
+                Sign Up
+              </button>
+            </div>
           </div>
         )}
-
         {login === "sign up" && (
           <div>
             <form action="" className="flex flex-col gap-8 mt-5 ">
@@ -83,7 +85,7 @@ const LoginSignUp = () => {
                 placeholder="Enter your password"
                 className="outline-none rounded-sm  shadow-2xs px-2 border-b-2  shadow-secondary py-2 w-80"
               />
-               <button className="border shadow-lg mt-2 mb-5 outline-none cursor-pointer font-bold py-2 rounded-sm hover:bg-secondary hover:text-white transition-all duration-500">
+              <button className="border shadow-lg mt-2 mb-5 outline-none cursor-pointer font-bold py-2 rounded-sm hover:bg-secondary hover:text-white transition-all duration-500">
                 Register
               </button>
             </form>

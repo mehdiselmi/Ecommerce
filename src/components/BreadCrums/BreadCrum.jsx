@@ -1,6 +1,7 @@
-import React, { useContext, useState } from "react";
+// import React, { useContext, useState } from "react";
+import { useState } from "react";
 import Products from "../../pages/Products";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const BreadCrum = (props) => {
   const [number, setNumber] = useState(1);
@@ -15,7 +16,7 @@ const BreadCrum = (props) => {
     }
   }
   function remove() {
-    if (number > 0) {
+    if (number > 1) {
       setNumber(number - 1);
     }
   }
@@ -31,19 +32,19 @@ const BreadCrum = (props) => {
             {" "}
             <img
               src={props.image}
-              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 avtive:scale-105 cursor-pointer transition-all duration-500"
+              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 active:scale-105 cursor-pointer transition-all duration-500"
             />
             <img
               src={props.image}
-              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 avtive:scale-105 cursor-pointer transition-all duration-500"
+              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 active:scale-105 cursor-pointer transition-all duration-500"
             />
             <img
               src={props.image}
-              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 avtive:scale-105 cursor-pointer transition-all duration-500"
+              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 active:scale-105 cursor-pointer transition-all duration-500"
             />
             <img
               src={props.image}
-              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 avtive:scale-105 cursor-pointer transition-all duration-500"
+              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 active:scale-105 cursor-pointer transition-all duration-500"
             />
           </div>
         </div>{" "}
@@ -69,9 +70,9 @@ const BreadCrum = (props) => {
               M
             </button>
           </div>
-          {/* Qauntity  */}
+          {/* Quantity  */}
           <div className="flex absolute mt-30 md:bottom-35 gap-3 items-center">
-            <label className="text-gray-600 ">Qauntity</label>
+            <label className="text-gray-600 ">Quantity</label>
             <button className="border px-2 cursor-pointer " onClick={remove}>
               -
             </button>
