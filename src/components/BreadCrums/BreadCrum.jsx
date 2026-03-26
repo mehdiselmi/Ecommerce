@@ -62,7 +62,7 @@ const BreadCrum = (props) => {
         <div className="flex md:flex-col space-y-10">
           <p className="md:text-2xl">{props.title}</p>
           {/* size  */}
-          <div className="flex absolute md:bottom-45 mt-20 gap-3 items-center">
+          <div className="flex absolute md:bottom-45 mt-10 gap-3 items-center">
             <label className="text-gray-600 ">Size</label>
             <button
               className={`border px-2 cursor-pointer ${size == "S" ? "bg-secondary text-white" : "bg-white text-secondary"}`}
@@ -79,7 +79,7 @@ const BreadCrum = (props) => {
             </button>
           </div>
           {/* Quantity  */}
-          <div className="flex absolute mt-30 md:bottom-35 gap-3 items-center">
+          <div className="flex absolute mt-20 md:bottom-35 gap-3 items-center">
             <label className="text-gray-600 ">Quantity</label>
             <button className="border px-2 cursor-pointer " onClick={remove}>
               -
@@ -89,12 +89,12 @@ const BreadCrum = (props) => {
               +
             </button>
           </div>
-          <p className="font-bold mt-40 text-primary md:text-xl absolute md:bottom-35">
+          <p className="font-bold mt-30 text-primary md:text-xl absolute md:bottom-35">
             ${props.price}
           </p>
         </div>
         {/* button add cart  */}
-        <button className="border  md:bottom-15 absolute transition-all mt-30 duration-500 cursor-pointer  rounded-xl active:bg-secondary active:text-white focus:bg-white focus:text-secondary hover:bg-secondary hover:text-white font-semibold py-2 w-full md:mt-4 px-10">
+        <button className="border  md:bottom-15 top-15 absolute transition-all mt-30 duration-500 cursor-pointer  rounded-xl active:bg-secondary active:text-white focus:bg-white focus:text-secondary hover:bg-secondary hover:text-white font-semibold py-2 w-full md:mt-4 px-10">
           + Add cart
         </button>
       </div>

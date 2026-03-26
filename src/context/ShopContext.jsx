@@ -35,6 +35,7 @@ const ShopContextProvider = (props) => {
           id: item.id + 200,
           title: item.title,
           price: Number(item.new_price.replace("$", "")),
+          new_price:item.new_price,old_price:item.old_price,
           image: item.image,
           category: "feature",
         }));
