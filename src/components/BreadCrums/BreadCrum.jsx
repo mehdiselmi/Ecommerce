@@ -89,12 +89,12 @@ const BreadCrum = (props) => {
               +
             </button>
           </div>
-          <p className="font-bold mt-30 text-primary md:text-xl absolute md:bottom-35">
+          <p className="font-bold mt-30   text-primary md:text-xl absolute md:bottom-35">
             ${props.price}
           </p>
         </div>
         {/* button add cart  */}
-        <button className="border  md:bottom-15 top-15 absolute transition-all mt-30 duration-500 cursor-pointer  rounded-xl active:bg-secondary active:text-white focus:bg-white focus:text-secondary hover:bg-secondary hover:text-white font-semibold py-2 w-full md:mt-4 px-10">
+        <button className="border  md:bottom-15 top-25 absolute transition-all mt-30 duration-500 cursor-pointer  rounded-xl active:bg-secondary active:text-white focus:bg-white focus:text-secondary hover:bg-secondary hover:text-white font-semibold py-2 w-full md:mt-4 px-10">
           + Add cart
         </button>
       </div>

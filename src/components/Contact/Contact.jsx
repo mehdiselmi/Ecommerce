@@ -83,7 +83,7 @@ const Contact = () => {
         <div className="pb-10">
           <hr className="border-gray-700 border-2" />{" "}
           <p className="pt-5 text-center text-gray-400">
-            © 2026 selmimehdi970@gmail.com. All rights reserved.
+            © 2026 MS. All rights reserved.
           </p>
         </div>
       </div>
