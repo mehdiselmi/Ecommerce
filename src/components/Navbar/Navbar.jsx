@@ -99,12 +99,15 @@ const Navbar = () => {
           <FaUser className="hover:scale-110  transition-all duration-500" />
         </Link>
         <FaHeart className="hover:scale-110  transition-all duration-500" />
-        <Link to="/cart">
+        <div className="relative ">
+          <Link to="/cart">
           <FaShoppingCart className="hover:scale-110 relative  transition-all duration-500" />
         </Link>
-        <div className="absolute right-18 bottom-11 rounded-full bg-primary w-4 h-4 flex justify-center items-center text-white font-bold text-[15px]">
+        <div className=" absolute -top-4 left-2  rounded-full bg-primary w-4 h-4 flex justify-center items-center text-white font-bold text-[15px]">
           0
         </div>
+        </div>
+        
         <button className="md:hidden flex" onClick={() => setOpen(!open)}>
           {open ? (
             <IoCloseSharp className="text-2xl font-bold" />

@@ -1,36 +1,54 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Products from "../../pages/Products";
 
 const Item = (props) => {
   return (
-    <div className="bg-secondary pt-5 my-5  md:h-auto md:w-80 min-h-100 w-80 mx-auto   hover:shadow-lg transition-shadow duration-700 rounded-lg  ">
-      <div className="rounded-lg md:p-5 mb-3 ">
-        <img
-          src={props.image}
-          loading="lazy"
-          className="md:h-90  m-auto mb-4 shadow-2xs shadow-black p-2  h-50 w-70 md:w-full hover:scale-102 active:scale-102 focus:scale-102 transition-all duration-300  rounded-xl bg-cover bg-center"
-        />
-      </div>
-      <div className="md:px-5 px-3">
-        <div className="flex justify-between ">
-          <p className="md:font-semibold tex-xl md:text-2xl text-white">{props.name}</p>
-          <p>⭐⭐⭐⭐⭐</p>
+    // جعلنا الكارت يأخذ العرض الكامل المتاح w-full مع حد أقصى max-w-[360px] وارتفاع ثابت حقيقي h-[480px]
+    <div className="bg-secondary p-4 my-4 transition-all duration-300 hover:shadow-xl rounded-lg flex flex-col justify-between h-[480px] w-full max-w-[350px] mx-auto">
+      
+      {/* الجزء العلوي: يحتوي على الصورة والبيانات، وبينهما مسافات تلقائية بفضل gap-3 */}
+      <div className="flex flex-col gap-3">
+        
+        {/* حاوية الصورة: أعطيناها خلفية بيضاء وارتفاعاً ثابتاً لتبدو الصور متناسقة دائماً */}
+        <div className="rounded-lg bg-white p-2 h-60 flex items-center justify-center overflow-hidden">
+          <img
+            src={props.image}
+            loading="lazy"
+            className="max-h-full  max-w-full object-contain hover:scale-105 transition-all duration-300"
+            alt={props.name}
+          />
         </div>
-        <div className=" text-xl flex gap-4 pt-2 md:pt-4">
-          <div className="font-bold text-primary">${props.new_price}</div>
-          <div className="font-bold text-gray-400 line-through ">
-          <p> ${props.old_price}{" "}</p>
+        
+        {/* تفاصيل المنتج */}
+        <div className="px-1 mt-1">
+          {/* حاوية الاسم والنجوم: ارتفاع ثابت h-12 متباعد ومريح للعين */}
+          <div className="flex justify-between items-start h-12 mb-2">
+            <p className="font-semibold text-sm text-white line-clamp-2 flex-1 pr-2 leading-tight">
+              {props.name}
+            </p>
+            <p className="shrink-0 text-xs mt-0.5">⭐⭐⭐⭐⭐</p>
+          </div>
+          
+          {/* الأسعار متباعدة بشكل ممتاز */}
+          <div className="text-xl flex gap-3 items-center mt-2">
+            <div className="font-bold text-primary">${props.new_price}</div>
+            <div className="font-medium text-gray-400 line-through text-sm">
+              ${props.old_price}
+            </div>
           </div>
         </div>
+
       </div>
-      <div className="md:p-5 p-2">
+
+      {/* قسم الزر في الأسفل تماماً ومفصول بمسافة */}
+      <div className="mt-auto pt-2">
         <Link to={`/product/${props.id}`}>
-          <button className="border w-full py-2 active:bg-secondary focus:bg-secondary hover:bg-white cursor-pointer hover:text-primary transition-all duration-700 font-bold rounded-lg bg-primary text-white outline-none">
+          <button className="border w-full py-2.5 active:scale-98 cursor-pointer hover:bg-white hover:text-primary transition-all duration-300 font-bold rounded-lg bg-primary text-white outline-none text-sm">
             Shop Now
           </button>
         </Link>
       </div>
+
     </div>
   );
 };

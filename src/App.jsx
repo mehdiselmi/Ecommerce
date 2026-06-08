@@ -10,11 +10,13 @@ import banner2 from "./components/Assets/banner2.jpg";
 import kid_banner from "./components/Assets/banner_kids.png";
 import ShopContextProvider from "./context/ShopContext";
 import Contact from "./components/Contact/Contact";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   return (
     <ShopContextProvider>
       <Navbar />
+        <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route path="/mens" element={<ShopCategory banner={banner8} category="men's clothing" />} />
