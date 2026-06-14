@@ -2,113 +2,80 @@ import React, { useState } from "react";
 import { FaUser, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
 
-  const isActive = (path) => location.pathname === path;
+  const navLinks = [
+    { path: "/", label: "Shop" },
+    { path: "/mens", label: "Men" },
+    { path: "/womens", label: "Women" },
+    { path: "/kids", label: "Kids" },
+  ];
 
   return (
-    <div className="flex py-5 fixed w-full left-0 right-0 top-0 z-50 shadow-md justify-between items-center px-10 md:px-20">
+    <nav className="flex py-5 fixed w-full left-0 right-0 top-0 z-50 shadow-md justify-between items-center px-10 md:px-20 bg-white">
       {/* Logo */}
       <h1 className="font-bold text-2xl">
-        <Link to="/">
+        <NavLink to="/">
           fancy{" "}
-          <span className="bg-primary text-white rounded-xs px-1">closet</span>
-        </Link>
+          <span className="bg-primary text-white rounded-sm px-1">closet</span>
+        </NavLink>
       </h1>
 
+  
       <ul className="hidden md:flex md:gap-6 uppercase">
-        <li>
-          <Link
-            className={`transition-all duration-500 ${
-              isActive("/") ? "underline underline-offset-4 text-primary" : ""
-            } hover:text-primary`}
-            to="/"
-          >
-            Shop
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={`transition-all duration-500 ${
-              isActive("/mens")
-                ? "underline underline-offset-4 text-primary"
-                : ""
-            } hover:text-primary`}
-            to="/mens"
-          >
-            Men
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={`transition-all duration-500 ${
-              isActive("/womens")
-                ? "underline underline-offset-4 text-primary"
-                : ""
-            } hover:text-primary`}
-            to="/womens"
-          >
-            Women
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={`transition-all duration-500 ${
-              isActive("/kids")
-                ? "underline underline-offset-4 text-primary"
-                : ""
-            } hover:text-primary`}
-            to="/kids"
-          >
-            Kids
-          </Link>
-        </li>
+        {navLinks.map((link) => (
+          <li key={link.path}>
+            <NavLink
+              to={link.path}
+              end={link.path === "/"}
+              className={({ isActive }) =>
+                `transition-all duration-500 hover:text-primary ${
+                  isActive ? "underline underline-offset-4 text-primary" : ""
+                }`
+              }
+            >
+              {link.label}
+            </NavLink>
+          </li>
+        ))}
       </ul>
 
+      
       {open && (
-        <ul className="absolute top-23 h-screen space-y-10 w-full right-0 bg-secondary opacity-97 p-4 md:hidden">
-          <li>
-            <Link to="/" onClick={() => setOpen(false)}>
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link to="/mens" onClick={() => setOpen(false)}>
-              Men
-            </Link>
-          </li>
-          <li>
-            <Link to="/womens" onClick={() => setOpen(false)}>
-              Women
-            </Link>
-          </li>
-          <li>
-            <Link to="/kids" onClick={() => setOpen(false)}>
-              Kids
-            </Link>
-          </li>
+        <ul className="absolute top-24 h-screen space-y-10 w-full right-0 bg-secondary opacity-95 p-4 md:hidden">
+          {navLinks.map((link) => (
+            <li key={link.path}>
+              <NavLink to={link.path} onClick={() => setOpen(false)}>
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       )}
 
+
       <div className="flex items-center gap-4 text-xl">
-        <Link to="/login">
-          <FaUser className="hover:scale-110  transition-all duration-500" />
-        </Link>
-        <FaHeart className="hover:scale-110  transition-all duration-500" />
-        <div className="relative ">
-          <Link to="/cart">
-          <FaShoppingCart className="hover:scale-110 relative  transition-all duration-500" />
-        </Link>
-        <div className=" absolute -top-4 left-2  rounded-full bg-primary w-4 h-4 flex justify-center items-center text-white font-bold text-[15px]">
-          0
-        </div>
-        </div>
-        
-        <button className="md:hidden flex" onClick={() => setOpen(!open)}>
+        <NavLink to="/login">
+          <FaUser className="hover:scale-110 transition-all duration-500" />
+        </NavLink>
+        <FaHeart className="hover:scale-110 transition-all duration-500" />
+        <NavLink to="/cart" className="relative">
+          <FaShoppingCart className="hover:scale-110 transition-all duration-500" />
+          <div className="absolute -top-2 -right-2 rounded-full bg-primary w-5 h-5 flex justify-center items-center text-white font-bold text-xs">
+            0
+          </div>
+        </NavLink>
+
+    
+        <button
+          type="button"
+          aria-label="Toggle menu"
+          className="md:hidden flex"
+          onClick={() => setOpen(!open)}
+        >
           {open ? (
             <IoCloseSharp className="text-2xl font-bold" />
           ) : (
@@ -116,7 +83,7 @@ const Navbar = () => {
           )}
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 

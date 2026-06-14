@@ -1,93 +1,120 @@
 import React from "react";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom"; // 1. استيراد Link لجعل القوائم قابلة للضغط والانتقال
+import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+
 const Contact = () => {
   return (
-    <div className="mt-20">
-      <div className="bg-gray-950 text-white px-4 md:px-10 pt-30">
-        <div className="flex pb-20 md:flex-row flex-col gap-20 justify-between md:items-center">
-          <div className="space-y-3  ">
-            <h1 className="text-2xl font-bold pb-5 text-primary">
+    <footer className="mt-20 bg-gray-950 text-white px-6 md:px-16 pt-20 md:pt-24">
+      <div className="max-w-7xl mx-auto">
+
+        <div className="flex pb-16 flex-col md:flex-row gap-12 md:gap-20 justify-between items-start">
+          
+
+          <div className="space-y-4 max-w-sm">
+            <h1 className="text-2xl font-bold pb-2 text-primary">
               Fancy{" "}
-              <span className="text-black bg-white px-3 py-1  rounded-lg">
+              <span className="text-black bg-white px-3 py-1 rounded-lg font-extrabold tracking-wide">
                 Closet
               </span>
             </h1>
-            <p className="md:font-bold  font-medium">Adress</p>
-            <p className="text-gray-400 md:text-xl text-sm">
-              Level 1,12 Sample St, Sydnet NSW 2000{" "}
-            </p>
-            <p className="md:font-bold font-medium">Contact</p>
-            <p className="text-gray-400 md:text-xl text-sm">
-              1800 123 4567hello@fancycloset.com
-            </p>
-            <div className="flex items-center gap-4">
-              <FaFacebookF className="hover:scale-105 cursor-pointer" />
-              <FaInstagram className="hover:scale-110 cursor-pointer" />
-              <FaXTwitter className="hover:scale-110 cursor-pointer" />
-              <a href="https://www.linkedin.com/in/mehdi-selmi-939a82273/">
-                {" "}
-                <FaLinkedin className="hover:scale-110 cursor-pointer" />
-              </a>
-              <FaYoutube className="hover:scale-110 cursor-pointer" />
+            
+            <div className="space-y-1">
+              <p className="font-bold text-sm text-gray-400 uppercase tracking-wider">Address</p>
+              <p className="text-gray-300 text-sm md:text-base">
+                Level 1, 12 Sample St, Sydney NSW 2000
+              </p>
+            </div>
+
+            <div className="space-y-1">
+              <p className="font-bold text-sm text-gray-400 uppercase tracking-wider">Contact</p>
+
+              <div className="text-gray-300 text-sm md:text-base flex flex-col gap-1">
+                <a href="tel:18001234567" className="hover:text-primary transition-colors duration-250">
+                  1800 123 4567
+                </a>
+                <a href="mailto:hello@fancycloset.com" className="hover:text-primary transition-colors duration-250">
+                  hello@fancycloset.com
+                </a>
+              </div>
+            </div>
+
+     
+            <div className="flex items-center gap-5 pt-2">
+              {[
+                { icon: <FaFacebookF />, url: "https://facebook.com" },
+                { icon: <FaInstagram />, url: "https://instagram.com" },
+                { icon: <FaXTwitter />, url: "https://twitter.com" },
+                { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/mehdi-selmi-939a82273/" },
+                { icon: <FaYoutube />, url: "https://youtube.com" }
+              ].map((social, index) => (
+                <a 
+                  key={index} 
+                  href={social.url} 
+                  target="_blank" 
+                 
+                  className="text-gray-400 hover:text-white hover:scale-115 transition-all duration-300 text-xl"
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
-          <div className="flex justify-between underline decoration-secondary underline-offset-8 md:flex-row flex-col md:gap-20 gap-15 font-medium  cursor-pointer md:font-semibold">
+
+       
+          <div className="flex flex-row md:gap-24 gap-16 font-medium md:font-semibold">
+            
+        
             <div>
-              <ul className="space-y-3 ">
-                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
-                  Shop now
-                </li>
-                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
-                  About us
-                </li>
-                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
-                  Read blog
-                </li>
-                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
-                  Contact us
-                </li>
-                <li className="transition-colors text-gray-400 hover:text-gray-700 focus:text-gray-700 active:text-gray-700">
-                  {" "}
-                  Size guide
-                </li>{" "}
+              <ul className="space-y-3.5 text-sm md:text-base">
+                {[
+                  { name: "Shop now", path: "/" },
+                  { name: "About us", path: "/about" },
+                  { name: "Read blog", path: "/blog" },
+                  { name: "Contact us", path: "/contact" },
+                  { name: "Size guide", path: "/size-guide" }
+                ].map((link, index) => (
+                  <li key={index}>
+                    <Link to={link.path} className="text-gray-400 hover:text-white transition-colors duration-200 hover:underline underline-offset-4">
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
+
+          
             <div>
-              <ul className="space-y-3">
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
-                  Returns
-                </li>
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
-                  {" "}
-                  Shipping info
-                </li>
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
-                  {" "}
-                  Gift cards
-                </li>
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
-                  {" "}
-                  Track order
-                </li>
-                <li className="transition-colors text-gray-400 hover:text-secondary focus:text-secondary active:text-secondary">
-                  Student discount
-                </li>
+              <ul className="space-y-3.5 text-sm md:text-base">
+                {[
+                  { name: "Returns", path: "/returns" },
+                  { name: "Shipping info", path: "/shipping" },
+                  { name: "Gift cards", path: "/gift-cards" },
+                  { name: "Track order", path: "/track-order" },
+                  { name: "Student discount", path: "/discount" }
+                ].map((link, index) => (
+                  <li key={index}>
+                    <Link to={link.path} className="text-gray-400 hover:text-white transition-colors duration-200 hover:underline underline-offset-4">
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
-          </div>{" "}
+
+          </div>
         </div>
+
+      
         <div className="pb-10">
-          <hr className="border-gray-700 border-2" />{" "}
-          <p className="pt-5 text-center text-gray-400">
+          <hr className="border-gray-800 border-t" /> 
+          <p className="pt-6 text-center text-xs md:text-sm text-gray-500">
             © 2026 MS. All rights reserved.
           </p>
         </div>
+
       </div>
-    </div>
+    </footer>
   );
 };
 

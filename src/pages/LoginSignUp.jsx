@@ -2,56 +2,53 @@ import React, { useState } from "react";
 
 const LoginSignUp = () => {
   const [login, setLogin] = useState("login");
+
   return (
-    <div className="md:mt-20 mt-24 pt-6 bg-neutral rounded-sm text-secondary flex  items-center w-85 shadow-lg md:w-100 min-h-100 mx-auto flex-col">
-      <p className="text-2xl">Welcome to Fancy closet.</p>
-      <div className="flex gap-10 mt-3">
-        <button
-          className=" transition-all rounded-br-lg  duration-500 hover:scale-96 focus:scale-96 active:scale-96 bg-secondary p-2 text-white  shadow-lg font-semibold "
-          onClick={() => setLogin("login")}
-        >
-          Log in
-        </button>
-      </div>
+    <div className="md:mt-20 mt-24 pt-6 rounded-sm text-secondary flex items-center w-80 md:w-96 min-h-[400px] mx-auto flex-col">
+      <p className="text-2xl font-semibold">Sign in to your account</p>
+      <p className="text-xl text-neutral-500 my-2">Welcome to Fancy Closet.</p>
 
       <div>
         {login === "login" && (
           <div>
-            <form action="" className="flex flex-col gap-2 mt-5 ">
-              <label htmlFor="name">USERNAME</label>
-              <input
-                type="text"
-                name="name"
-                placeholder="name "
-                className="outline-none rounded-sm  focus:shadow-2xl px-2 border-b-2  focus:shadow-secondary py-2 w-80"
-              />
-              <label htmlFor="email">EMAIL</label>
-
+            <form className="flex flex-col gap-2 mt-5">
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 name="email"
+                required
                 placeholder="you@example.com"
-                className="outline-none rounded-sm  focus:shadow-2xl px-2 border-b-2  focus:shadow-secondary py-2 w-80"
+                className="outline-none border rounded-xl px-3 border-neutral-400 py-2 w-full"
               />
-              <label htmlFor="password">PASSWORD</label>
+
+              <div className="flex justify-between items-center mt-2">
+                <label htmlFor="password">Password</label>
+                <p className="text-neutral-500 hover:text-black cursor-pointer">
+                  Forgot?
+                </p>
+              </div>
 
               <input
                 type="password"
                 name="password"
-                placeholder="Enter password"
-                className="outline-none rounded-sm  focus:shadow-2xl px-2 border-b-2  focus:shadow-secondary py-2 w-80"
+                required
+                placeholder="........."
+                className="outline-none rounded-xl border px-3 border-neutral-400 py-2 w-full"
               />
-              <button className="border shadow-lg mt-4 mb-2 outline-none cursor-pointer font-bold py-2 rounded-sm hover:bg-secondary hover:text-white transition-all duration-500">
+
+              <button
+                type="submit"
+                className="border shadow-lg mt-4 mb-2 outline-none cursor-pointer font-bold py-2 rounded-sm hover:bg-secondary hover:text-white transition-all duration-500"
+              >
                 Log in
               </button>
-              <a href="" className="hover:text-black mb-3 text-gray-600">
-                Forget your password?
-              </a>
-            </form>{" "}
+            </form>
+
             <div className="flex items-center mb-3 gap-4">
               <p>Don't have an account?</p>
               <button
-                className="  hover:scale-96 focus:scale-96 active:scale-96 cursor-pointer   text-secondary    font-semibold "
+                type="button"
+                className="hover:scale-105 cursor-pointer text-secondary font-semibold"
                 onClick={() => setLogin("sign up")}
               >
                 Sign Up
@@ -59,35 +56,72 @@ const LoginSignUp = () => {
             </div>
           </div>
         )}
+
         {login === "sign up" && (
           <div>
-            <form action="" className="flex flex-col gap-8 mt-5 ">
+            <form className="flex flex-col gap-6 mt-5">
               <div className="flex justify-between gap-5">
                 <input
                   type="text"
-                  placeholder=" First name "
-                  className="outline-none rounded-sm  shadow-2xs px-2 border-b-2  shadow-secondary py-2 w-40"
+                  placeholder="First name"
+                  required
+                  className="outline-none border-gray-400 px-2 border-b-2 py-2 w-1/2"
                 />
-
                 <input
                   type="text"
-                  placeholder="  Last name"
-                  className="outline-none rounded-sm shadow-2xs px-2 border-b-2  shadow-secondary py-2 w-40"
+                  placeholder="Last name"
+                  required
+                  className="outline-none border-gray-400 px-2 border-b-2 py-2 w-1/2"
                 />
               </div>
-              <input
-                type="email"
-                placeholder="you@example.com"
-                className="outline-none rounded-sm  shadow-2xs px-2 border-b-2  shadow-secondary py-2 w-80"
-              />
-              <input
-                type="password"
-                placeholder="Enter your password"
-                className="outline-none rounded-sm  shadow-2xs px-2 border-b-2  shadow-secondary py-2 w-80"
-              />
-              <button className="border shadow-lg mt-2 mb-5 outline-none cursor-pointer font-bold py-2 rounded-sm hover:bg-secondary hover:text-white transition-all duration-500">
-                Register
+
+              <div className="flex justify-between gap-5">
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  required
+                  className="outline-none border-gray-400 px-2 border-b-2 py-2 w-1/2"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone number"
+                  required
+                  className="outline-none border-gray-400 px-2 border-b-2 py-2 w-1/2"
+                />
+              </div>
+
+              <div className="flex justify-between gap-5">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  required
+                  className="outline-none border-gray-400 px-2 border-b-2 py-2 w-1/2"
+                />
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  required
+                  className="outline-none border-gray-400 px-2 border-b-2 py-2 w-1/2"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="border shadow-lg mt-2 mb-5 outline-none cursor-pointer font-bold py-2 rounded-sm hover:bg-secondary hover:text-white transition-all duration-500"
+              >
+                Create Account
               </button>
+
+              <div className="text-center flex gap-3 justify-center">
+                <p>Already have an account?</p>
+                <button
+                  type="button"
+                  className="hover:scale-105 cursor-pointer text-blue-400 font-semibold"
+                  onClick={() => setLogin("login")}
+                >
+                  Login
+                </button>
+              </div>
             </form>
           </div>
         )}

@@ -1,101 +1,63 @@
-// import React, { useContext, useState } from "react";
-import { useState } from "react";
-import Products from "../../pages/Products";
-// import { useParams } from "react-router-dom";
+import React, { useState } from "react";
 
-const BreadCrum = (props) => {
+const BreadCrum = ({ image, title, price }) => {
   const [number, setNumber] = useState(1);
   const [size, setSize] = useState(null);
-  // const [showCart ,setShowCart]=usesta
-  //   const { products } = useContext(ShopContext);
-  // const { productId } = useParams();
-  // const product = products.find((e) => e.id === Number(productId));
-  function add() {
-    if (number >= 0) {
-      setNumber(number + 1);
-    }
-  }
-  function remove() {
-    if (number > 1) {
-      setNumber(number - 1);
-    }
-  }
+
+  const add = () => setNumber(number + 1);
+  const remove = () => number > 1 && setNumber(number - 1);
+
   return (
-    <div className="text-black mt-30  md:mt-24   md:px-30 grid md:grid-cols-2 grid-cols-1  items-center">
-      <div className=" flex justify-center  items-center  ">
-        <div className=" space-y-2">
-          {" "}
-          <div>
+    <div className="grid md:grid-cols-2 gap-8 mt-24 px-6">
+      <div className="flex flex-col items-center">
+        <img src={image} alt={title} className="w-64 bg-gray-100 p-2" />
+        <div className="flex gap-3 mt-4">
+          {[...Array(4)].map((_, i) => (
             <img
-              src={props.image}
-              loading="lazy"
-              className="w-65 bg-gray-100 p-2"
+              key={i}
+              src={image}
+              alt={`${title} ${i}`}
+              className="w-16 border p-1 rounded-sm hover:scale-105 transition"
             />
-          </div>
-          <div className="flex w-13 mt-4  gap-5 items-center">
-            {" "}
-            <img
-              src={props.image}
-              loading="lazy"
-              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 active:scale-105 cursor-pointer transition-all duration-500"
-            />
-            <img
-              src={props.image}
-              loading="lazy"
-              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 active:scale-105 cursor-pointer transition-all duration-500"
-            />
-            <img
-              src={props.image}
-              loading="lazy"
-              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 active:scale-105 cursor-pointer transition-all duration-500"
-            />
-            <img
-              src={props.image}
-              loading="lazy"
-              className="border p-1 rounded-sm hover:scale-105 focus:scale-105 active:scale-105 cursor-pointer transition-all duration-500"
-            />
-          </div>
-        </div>{" "}
+          ))}
+        </div>
       </div>
 
-      <div className="  relative  gap-8 md:w-100  md:h-110 min-h-50 w-64 mx-auto mt-5">
-        <div className="flex md:flex-col space-y-10">
-          <p className="md:text-2xl">{props.title}</p>
-          {/* size  */}
-          <div className="flex absolute md:bottom-45 mt-10 gap-3 items-center">
-            <label className="text-gray-600 ">Size</label>
-            <button
-              className={`border px-2 cursor-pointer ${size == "S" ? "bg-secondary text-white" : "bg-white text-secondary"}`}
-              onClick={() => setSize("S")}
-            >
-              S
-            </button>
+      <div className="flex flex-col gap-6">
+        <p className="text-2xl font-semibold">{title}</p>
 
+        <div className="flex gap-3 items-center">
+          <label className="text-gray-600">Size:</label>
+          {["S", "M"].map((s) => (
             <button
-              className={`border px-2 cursor-pointer ${size == "M" ? "bg-secondary text-white" : "bg-white text-secondary"}`}
-              onClick={() => setSize("M")}
+              key={s}
+              onClick={() => setSize(s)}
+              className={`border px-3 py-1 rounded ${
+                size === s
+                  ? "bg-secondary text-white"
+                  : "bg-white text-secondary"
+              }`}
             >
-              M
+              {s}
             </button>
-          </div>
-          {/* Quantity  */}
-          <div className="flex absolute mt-20 md:bottom-35 gap-3 items-center">
-            <label className="text-gray-600 ">Quantity</label>
-            <button className="border px-2 cursor-pointer " onClick={remove}>
-              -
-            </button>
-            <p className="text-xl">{number}</p>
-            <button className="border px-2 cursor-pointer " onClick={add}>
-              +
-            </button>
-          </div>
-          <p className="font-bold mt-30   text-primary md:text-xl absolute md:bottom-35">
-            ${props.price}
-          </p>
+          ))}
         </div>
-        {/* button add cart  */}
-        <button className="border  md:bottom-15  absolute transition-all mt-30 duration-500 cursor-pointer  rounded-xl active:bg-secondary active:text-white focus:bg-white focus:text-secondary hover:bg-secondary hover:text-white font-semibold py-2 w-full md:mt-4 px-10">
-          + Add cart
+
+        <div className="flex gap-3 items-center">
+          <label className="text-gray-600">Quantity:</label>
+          <button onClick={remove} className="border px-3">
+            -
+          </button>
+          <p className="text-xl">{number}</p>
+          <button onClick={add} className="border px-3">
+            +
+          </button>
+        </div>
+
+        <p className="font-bold text-primary text-xl">${price}</p>
+
+        <button className="border rounded-xl py-2 px-6 font-semibold hover:bg-secondary hover:text-white transition">
+          + Add to Cart
         </button>
       </div>
     </div>
