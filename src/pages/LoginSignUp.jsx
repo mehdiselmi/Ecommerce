@@ -4,7 +4,7 @@ const LoginSignUp = () => {
   const [login, setLogin] = useState("login");
 
   return (
-    <div className="md:mt-20 mt-24 pt-6 rounded-sm text-secondary flex items-center w-80 md:w-96 min-h-[400px] mx-auto flex-col">
+    <div className="md:mt-20 mt-24 pt-6 rounded-sm text-secondary flex items-center w-80 md:w-96 min-h-100 mx-auto flex-col">
       <p className="text-2xl font-semibold">Sign in to your account</p>
       <p className="text-xl text-neutral-500 my-2">Welcome to Fancy Closet.</p>
 

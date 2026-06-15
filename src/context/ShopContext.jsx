@@ -7,6 +7,21 @@ import data from "../components/Assets/data";
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
+  const [cartItems, setCartItems] = useState([]);
+  const [showCart, setShowCart] = useState(false);
+
+  const openCart = () => setShowCart(true);
+  const closeCart = () => setShowCart(false);
+  const addToCart = (product, quantity, size) => {
+    setCartItems([
+      ...cartItems,
+      {
+        ...product,
+        quantity,
+        size,
+      },
+    ]);
+  };
   const kidsProducts = [
     {
       id: 146,
@@ -19,7 +34,6 @@ const ShopContextProvider = (props) => {
       id: 157,
       title: "Kids Shoes",
       price: 35,
-
       image: kid2,
       category: "kids",
     },
@@ -45,7 +59,14 @@ const ShopContextProvider = (props) => {
       .catch((error) => console.error(error));
   }, []);
 
-  const contextValue = { products };
+  const contextValue = {
+    products,
+    cartItems,
+    addToCart,
+    showCart,
+    openCart,
+    closeCart,
+  };
 
   return (
     <ShopContext.Provider value={contextValue}>

@@ -24,7 +24,6 @@ const Navbar = () => {
         </NavLink>
       </h1>
 
-  
       <ul className="hidden md:flex md:gap-6 uppercase">
         {navLinks.map((link) => (
           <li key={link.path}>
@@ -43,7 +42,6 @@ const Navbar = () => {
         ))}
       </ul>
 
-      
       {open && (
         <ul className="absolute top-24 h-screen space-y-10 w-full right-0 bg-secondary opacity-95 p-4 md:hidden">
           {navLinks.map((link) => (
@@ -56,20 +54,19 @@ const Navbar = () => {
         </ul>
       )}
 
-
       <div className="flex items-center gap-4 text-xl">
         <NavLink to="/login">
           <FaUser className="hover:scale-110 transition-all duration-500" />
         </NavLink>
         <FaHeart className="hover:scale-110 transition-all duration-500" />
-        <NavLink to="/cart" className="relative">
+
+        <button className="relative">
           <FaShoppingCart className="hover:scale-110 transition-all duration-500" />
           <div className="absolute -top-2 -right-2 rounded-full bg-primary w-5 h-5 flex justify-center items-center text-white font-bold text-xs">
             0
           </div>
-        </NavLink>
+        </button>
 
-    
         <button
           type="button"
           aria-label="Toggle menu"
@@ -82,6 +79,13 @@ const Navbar = () => {
             <GiHamburgerMenu className="text-2xl font-bold" />
           )}
         </button>
+        <div
+          className={`fixed top-0 right-0 h-screen w-90 bg-white shadow-lg transition-transform duration-300 `}
+        >
+          <button className="p-4">✕</button>
+
+          <h2 className="text-xl font-bold p-4">Shopping Cart</h2>
+        </div>
       </div>
     </nav>
   );
